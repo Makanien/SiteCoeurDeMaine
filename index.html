@@ -3,7 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cabinet Infirmier Cœur de Maine - Soins à domicile et au cabinet</title>
+    <title>Cabinet Infirmier Cœur de Maine Angers - Soins à Domicile et au Cabinet</title>
+    <meta name="description" content="Cabinet infirmier Cœur de Maine à Angers. Équipe de 4 infirmières diplômées. Soins à domicile et au cabinet 7j/7 de 7h à 19h30. Conventionné sécurité sociale.">
+    <meta name="keywords" content="infirmier Angers, soins à domicile Angers, cabinet infirmier, prise de sang, injection, pansement, soins infirmiers Maine-et-Loire">
+    <meta name="author" content="Cabinet Infirmier Cœur de Maine">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cabinet Infirmier Cœur de Maine Angers">
+    <meta property="og:description" content="Équipe de 4 infirmières diplômées. Soins à domicile et au cabinet 7j/7 de 7h à 19h30.">
+    <meta property="og:locale" content="fr_FR">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Cabinet Infirmier Cœur de Maine",
+        "description": "Cabinet infirmier à Angers proposant des soins à domicile et au cabinet",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1 montée Tire-Jarret",
+            "addressLocality": "Angers",
+            "postalCode": "49100",
+            "addressCountry": "FR"
+        },
+        "telephone": ["02 41 87 13 16", "06 10 35 08 24"],
+        "email": "cabinet.infirmier.cdm@gmail.com",
+        "openingHours": "Mo-Su 07:00-19:30",
+        "areaServed": "Angers",
+        "medicalSpecialty": "Nursing"
+    }
+    </script>
+    
     <style>
         * {
             margin: 0;
@@ -24,6 +57,7 @@
             padding: 0 20px;
         }
 
+        /* Header */
         header {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
@@ -64,6 +98,7 @@
             color: #dc143c;
         }
 
+        /* Hero Section */
         .hero {
             padding: 120px 0 80px;
             text-align: center;
@@ -127,8 +162,8 @@
             box-shadow: 0 6px 20px rgba(220, 20, 60, 0.6);
         }
 
-        .services {
-            background: white;
+        /* Sections */
+        section {
             padding: 80px 0;
         }
 
@@ -139,6 +174,37 @@
             margin-bottom: 3rem;
         }
 
+        .about {
+            background: white;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #555;
+        }
+
+        .about-content p {
+            margin-bottom: 2rem;
+        }
+
+        .about-highlight {
+            font-weight: 600;
+            color: #333;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 15px;
+            border-left: 4px solid #dc143c;
+        }
+
+        /* Services */
+        .services {
+            background: #f8f9fa;
+        }
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -147,17 +213,18 @@
         }
 
         .service-card {
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            background: white;
             padding: 2rem;
             border-radius: 15px;
             text-align: center;
             transition: all 0.3s ease;
-            border: 1px solid rgba(231, 76, 60, 0.1);
+            border: 1px solid rgba(220, 20, 60, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
         }
 
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
             border-color: #dc143c;
         }
 
@@ -167,16 +234,46 @@
             color: #dc143c;
         }
 
+        .service-card h3 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .service-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        .services-highlight {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: linear-gradient(135deg, #dc143c, #b91c3c);
+            border-radius: 15px;
+            color: white;
+        }
+
+        .services-highlight h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .services-highlight p {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact */
         .contact {
             background: linear-gradient(135deg, #2c3e50, #34495e);
-            padding: 80px 0;
             color: white;
         }
 
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
             margin-top: 3rem;
         }
 
@@ -187,6 +284,12 @@
             border-radius: 15px;
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-3px);
         }
 
         .contact-icon {
@@ -195,9 +298,15 @@
             color: #dc143c;
         }
 
+        .contact-card h3 {
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
         .contact-info {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             margin-bottom: 0.5rem;
+            font-weight: 500;
         }
 
         .address {
@@ -205,6 +314,7 @@
             opacity: 0.9;
         }
 
+        /* Footer */
         footer {
             background: #1a1a1a;
             color: white;
@@ -212,6 +322,24 @@
             padding: 2rem 0;
         }
 
+        /* Breadcrumb */
+        .breadcrumb {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            margin-top: 70px;
+        }
+
+        .breadcrumb a {
+            color: #dc143c;
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -230,12 +358,34 @@
             .contact-grid {
                 grid-template-columns: 1fr;
             }
+
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+
+        /* Skip link for accessibility */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: #dc143c;
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            z-index: 1001;
+        }
+
+        .skip-link:focus {
+            top: 6px;
         }
     </style>
 </head>
 <body>
-    <header>
-        <nav class="container">
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+    
+    <header role="banner">
+        <nav class="container" role="navigation" aria-label="Navigation principale">
             <div class="logo">Cœur de Maine</div>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
@@ -246,142 +396,155 @@
         </nav>
     </header>
 
-    <section id="accueil" class="hero">
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
         <div class="container">
-            <div class="hero-content">
-                <div class="heart-logo">
-                    <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
-                        <!-- ECG Line - exactly like the original -->
-                        <path d="M10,40 L50,40 L55,25 L60,55 L65,30 L70,50 L75,40 L120,40 L175,40 L180,30 L185,50 L190,25 L195,55 L200,40 L245,40 L290,40" 
-                              stroke="#dc143c" stroke-width="3" fill="none"/>
-                        
-                        <!-- Heart Shape - matching the provided image -->
-                        <path d="M125,28 C125,20 132,15 140,15 C148,15 155,20 155,28 C155,36 140,55 140,55 C140,55 125,36 125,28 Z M135,28 C135,20 142,15 150,15 C158,15 165,20 165,28 C165,36 150,55 150,55 C150,55 135,36 135,28 Z" 
-                              fill="#dc143c" stroke="#dc143c" stroke-width="2"/>
-                        
-                        <!-- Caduceus - matching the provided image exactly -->
-                        <g transform="translate(145,20)">
-                            <!-- Central blue staff -->
-                            <line x1="0" y1="0" x2="0" y2="30" stroke="#1e3a8a" stroke-width="2"/>
-                            
-                            <!-- Blue top circle/knob -->
-                            <circle cx="0" cy="0" r="2" fill="#1e3a8a"/>
-                            
-                            <!-- Red serpent wrapped around the staff -->
-                            <path d="M-3,4 Q0,2 3,4 Q6,6 3,8 Q0,10 -3,8 Q-6,10 -3,12 Q0,14 3,12 Q6,14 3,16 Q0,18 -3,16 Q-6,18 -3,20 Q0,22 3,20 Q6,22 3,24 Q0,26 -3,24" 
-                                  stroke="#dc143c" stroke-width="1.5" fill="none"/>
-                            
-                            <!-- Red serpent head -->
-                            <circle cx="-3" cy="4" r="1" fill="#dc143c"/>
-                            
-                            <!-- Red serpent tail -->
-                            <path d="M-3,24 Q-4,26 -3,28 Q-2,26 -1,28" stroke="#dc143c" stroke-width="1" fill="none"/>
-                        </g>
-                    </svg>
-                </div>
-                
-                <h1>Cabinet Infirmier<br>Cœur de Maine</h1>
-                <h2>Équipe de 4 infirmières diplômées d'État<br>Soins professionnels à domicile ou au cabinet</h2>
-                
-                <a href="#contact" class="cta-button">Prendre rendez-vous</a>
-            </div>
+            <a href="#accueil">Accueil</a> > Cabinet Infirmier Cœur de Maine
         </div>
-    </section>
+    </nav>
 
-        <section id="about" class="services">
-        <div class="container">
-            <h2 class="section-title">Qui sommes-nous ?</h2>
-            <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #555;">
-                <p>Notre Cabinet infirmier Cœur de Maine est implanté depuis une dizaine d'années. Il est situé près de la cathédrale Saint-Maurice, entre Fleur d'eau et la nouvelle esplanade Cœur de Maine. À proximité se trouve le parking des halles, vous permettant un accès facile.</p>
-                
-                <p style="margin-top: 2rem; font-weight: 600; color: #333;">Nous sommes une équipe de 4 infirmières diplômées d'État dynamiques, professionnelles, à l'écoute et disponibles pour vous apporter les soins prescrits dont vous avez besoin à domicile, comme au cabinet sur rendez-vous.</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="services" style="background: #f8f9fa;">
-        <div class="container">
-            <h2 class="section-title">Nos Services</h2>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">💉</div>
-                    <h3>Soins techniques</h3>
-                    <p>Prises de sang, injections, vaccination, pansements, saignée sur prescription médicale</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">💊</div>
-                    <h3>Soins d'hygiène & traitements</h3>
-                    <p>Soins d'hygiène, préparation de piluliers, distribution et surveillance des traitements</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>Soins à domicile</h3>
-                    <p>Tous les jours, du lundi au dimanche (fériés inclus), de 7h à 19h30</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">🏥</div>
-                    <h3>Soins au cabinet</h3>
-                    <p>Sur rendez-vous uniquement. Cabinet conventionné sécurité sociale avec tiers payant</p>
+    <main id="main-content" role="main">
+        <section id="accueil" class="hero" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="heart-logo" aria-hidden="true">
+                        <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Logo Cabinet Cœur de Maine">
+                            <title>Logo Cabinet Infirmier Cœur de Maine</title>
+                            <!-- ECG Line -->
+                            <path d="M10,40 L50,40 L55,25 L60,55 L65,30 L70,50 L75,40 L120,40 L175,40 L180,30 L185,50 L190,25 L195,55 L200,40 L245,40 L290,40" 
+                                  stroke="#dc143c" stroke-width="3" fill="none"/>
+                            
+                            <!-- Heart Shape -->
+                            <path d="M125,28 C125,20 132,15 140,15 C148,15 155,20 155,28 C155,36 140,55 140,55 C140,55 125,36 125,28 Z M135,28 C135,20 142,15 150,15 C158,15 165,20 165,28 C165,36 150,55 150,55 C150,55 135,36 135,28 Z" 
+                                  fill="#dc143c" stroke="#dc143c" stroke-width="2"/>
+                            
+                            <!-- Caduceus -->
+                            <g transform="translate(145,20)">
+                                <line x1="0" y1="0" x2="0" y2="30" stroke="#1e3a8a" stroke-width="2"/>
+                                <circle cx="0" cy="0" r="2" fill="#1e3a8a"/>
+                                <path d="M-3,4 Q0,2 3,4 Q6,6 3,8 Q0,10 -3,8 Q-6,10 -3,12 Q0,14 3,12 Q6,14 3,16 Q0,18 -3,16 Q-6,18 -3,20 Q0,22 3,20 Q6,22 3,24 Q0,26 -3,24" 
+                                      stroke="#dc143c" stroke-width="1.5" fill="none"/>
+                                <circle cx="-3" cy="4" r="1" fill="#dc143c"/>
+                                <path d="M-3,24 Q-4,26 -3,28 Q-2,26 -1,28" stroke="#dc143c" stroke-width="1" fill="none"/>
+                            </g>
+                        </svg>
+                    </div>
+                    
+                    <h1 id="hero-title">Cabinet Infirmier<br>Cœur de Maine</h1>
+                    <h2>Équipe de 4 infirmières diplômées d'État<br>Soins professionnels à domicile ou au cabinet</h2>
+                    
+                    <a href="#contact" class="cta-button" aria-label="Prendre rendez-vous avec le cabinet">Prendre rendez-vous</a>
                 </div>
             </div>
-            
-            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #dc143c, #b91c3c); border-radius: 15px; color: white;">
-                <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Informations importantes</h3>
-                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">✅ Cabinet conventionné par la sécurité sociale</p>
-                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">✅ Pratique du tiers payant (mutuelle)</p>
-                <p style="font-size: 1.1rem;">✅ Soins sur prescription médicale uniquement</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Contact & Rendez-vous</h2>
-            
-            <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon">📞</div>
-                    <h3>Téléphone</h3>
-                    <div class="contact-info">02 41 87 13 16</div>
-                    <div class="contact-info">06 10 35 08 24</div>
-                </div>
+        <section id="about" class="about" aria-labelledby="about-title">
+            <div class="container">
+                <h2 id="about-title" class="section-title">Qui sommes-nous ?</h2>
                 
-                <div class="contact-card">
-                    <div class="contact-icon">✉️</div>
-                    <h3>Email</h3>
-                    <div class="contact-info">cabinet.infirmier.cdm@gmail.com</div>
-                </div>
-                
-                <div class="contact-card">
-                    <div class="contact-icon">📍</div>
-                    <h3>Adresse</h3>
-                    <div class="contact-info">1 montée Tire-Jarret</div>
-                    <div class="contact-info address">49100 ANGERS</div>
-                    <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
-                        Près de la cathédrale Saint-Maurice<br>
-                        Parking des halles à proximité
+                <div class="about-content">
+                    <p>Notre Cabinet infirmier Cœur de Maine est implanté depuis une dizaine d'années. Il est situé près de la cathédrale Saint-Maurice, entre Fleur d'eau et la nouvelle esplanade Cœur de Maine. À proximité se trouve le parking des halles, vous permettant un accès facile.</p>
+                    
+                    <div class="about-highlight">
+                        <p>Nous sommes une équipe de 4 infirmières diplômées d'État dynamiques, professionnelles, à l'écoute et disponibles pour vous apporter les soins prescrits dont vous avez besoin à domicile, comme au cabinet sur rendez-vous.</p>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section id="services" class="services" aria-labelledby="services-title">
+            <div class="container">
+                <h2 id="services-title" class="section-title">Nos Services</h2>
                 
-                <div class="contact-card">
-                    <div class="contact-icon">🕐</div>
-                    <h3>Horaires</h3>
-                    <div class="contact-info">Tous les jours</div>
-                    <div class="contact-info">Lundi au Dimanche</div>
-                    <div class="contact-info">(fériés inclus)</div>
-                    <div style="margin-top: 1rem; font-weight: bold; color: #dc143c;">7h - 19h30</div>
+                <div class="services-grid">
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">💉</div>
+                        <h3>Soins techniques</h3>
+                        <p>Prises de sang, injections, vaccination, pansements, saignée sur prescription médicale</p>
+                    </article>
+                    
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">💊</div>
+                        <h3>Soins d'hygiène & traitements</h3>
+                        <p>Soins d'hygiène, préparation de piluliers, distribution et surveillance des traitements</p>
+                    </article>
+                    
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">🏠</div>
+                        <h3>Soins à domicile</h3>
+                        <p>Tous les jours, du lundi au dimanche (fériés inclus), de 7h à 19h30</p>
+                    </article>
+                    
+                    <article class="service-card">
+                        <div class="service-icon" aria-hidden="true">🏥</div>
+                        <h3>Soins au cabinet</h3>
+                        <p>Sur rendez-vous uniquement. Cabinet conventionné sécurité sociale avec tiers payant</p>
+                    </article>
+                </div>
+                
+                <div class="services-highlight">
+                    <h3>Informations importantes</h3>
+                    <p>✅ Cabinet conventionné par la sécurité sociale</p>
+                    <p>✅ Pratique du tiers payant (mutuelle)</p>
+                    <p>✅ Soins sur prescription médicale uniquement</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
+        <section id="contact" class="contact" aria-labelledby="contact-title">
+            <div class="container">
+                <h2 id="contact-title" class="section-title">Contact & Rendez-vous</h2>
+                
+                <div class="contact-grid">
+                    <article class="contact-card">
+                        <div class="contact-icon" aria-hidden="true">📞</div>
+                        <h3>Téléphone</h3>
+                        <div class="contact-info">
+                            <a href="tel:0241871316" style="color: inherit; text-decoration: none;">02 41 87 13 16</a>
+                        </div>
+                        <div class="contact-info">
+                            <a href="tel:0610350824" style="color: inherit; text-decoration: none;">06 10 35 08 24</a>
+                        </div>
+                    </article>
+                    
+                    <article class="contact-card">
+                        <div class="contact-icon" aria-hidden="true">✉️</div>
+                        <h3>Email</h3>
+                        <div class="contact-info">
+                            <a href="mailto:cabinet.infirmier.cdm@gmail.com" style="color: inherit; text-decoration: none;">cabinet.infirmier.cdm@gmail.com</a>
+                        </div>
+                    </article>
+                    
+                    <article class="contact-card">
+                        <div class="contact-icon" aria-hidden="true">📍</div>
+                        <h3>Adresse</h3>
+                        <address class="contact-info" style="font-style: normal;">
+                            1 montée Tire-Jarret<br>
+                            49100 ANGERS
+                        </address>
+                        <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                            Près de la cathédrale Saint-Maurice<br>
+                            Parking des halles à proximité
+                        </div>
+                    </article>
+                    
+                    <article class="contact-card">
+                        <div class="contact-icon" aria-hidden="true">🕐</div>
+                        <h3>Horaires</h3>
+                        <div class="contact-info">Tous les jours</div>
+                        <div class="contact-info">Lundi au Dimanche</div>
+                        <div class="contact-info">(fériés inclus)</div>
+                        <div style="margin-top: 1rem; font-weight: bold; color: #dc143c;">7h - 19h30</div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer role="contentinfo">
         <div class="container">
-            <p>&copy; 2025 Cabinet Infirmier Cœur de Maine - Tous droits réservés</p>
+            <p>&copy; 2025 Cabinet Infirmier Cœur de Maine - Tous droits réservés | 
+            <a href="#" style="color: #dc143c;">Mentions légales</a> | 
+            <a href="#" style="color: #dc143c;">Politique de confidentialité</a></p>
         </div>
     </footer>
 
@@ -408,6 +571,17 @@
             } else {
                 header.style.background = 'rgba(255, 255, 255, 0.95)';
             }
+        });
+
+        // Add focus management for accessibility
+        document.addEventListener('DOMContentLoaded', function() {
+            const skipLink = document.querySelector('.skip-link');
+            skipLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector('#main-content');
+                target.focus();
+                target.scrollIntoView();
+            });
         });
     </script>
 </body>
