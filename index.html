@@ -239,6 +239,7 @@
             <div class="logo">Cœur de Maine</div>
             <ul class="nav-links">
                 <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#about">Qui sommes-nous</a></li>
                 <li><a href="#services">Services</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -251,59 +252,88 @@
                 <div class="heart-logo">
                     <svg viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
                         <!-- ECG Line - exactly like the original -->
-                        <path d="M10,40 L50,40 L55,25 L60,55 L65,30 L70,50 L75,40 L120,40 L125,40 L175,40 L180,30 L185,50 L190,25 L195,55 L200,40 L245,40 L290,40" 
+                        <path d="M10,40 L50,40 L55,25 L60,55 L65,30 L70,50 L75,40 L120,40 L175,40 L180,30 L185,50 L190,25 L195,55 L200,40 L245,40 L290,40" 
                               stroke="#dc143c" stroke-width="3" fill="none"/>
                         
-                        <!-- Heart Shape - matching original proportions -->
-                        <path d="M125,25 C125,18 132,12 140,12 C148,12 155,18 155,25 C155,32 140,50 140,50 C140,50 125,32 125,25 Z M135,25 C135,18 142,12 150,12 C158,12 165,18 165,25 C165,32 150,50 150,50 C150,50 135,32 135,25 Z" 
-                              fill="#dc143c"/>
+                        <!-- Heart Shape - matching the provided image -->
+                        <path d="M125,28 C125,20 132,15 140,15 C148,15 155,20 155,28 C155,36 140,55 140,55 C140,55 125,36 125,28 Z M135,28 C135,20 142,15 150,15 C158,15 165,20 165,28 C165,36 150,55 150,55 C150,55 135,36 135,28 Z" 
+                              fill="#dc143c" stroke="#dc143c" stroke-width="2"/>
                         
-                        <!-- Simple medical cross - exactly like the original -->
-                        <g transform="translate(145,22)">
-                            <!-- Vertical bar of cross -->
-                            <rect x="-1.5" y="0" width="3" height="16" fill="white"/>
-                            <!-- Horizontal bar of cross -->
-                            <rect x="-6" y="6" width="12" height="3" fill="white"/>
+                        <!-- Caduceus - matching the provided image exactly -->
+                        <g transform="translate(145,20)">
+                            <!-- Central blue staff -->
+                            <line x1="0" y1="0" x2="0" y2="30" stroke="#1e3a8a" stroke-width="2"/>
+                            
+                            <!-- Blue top circle/knob -->
+                            <circle cx="0" cy="0" r="2" fill="#1e3a8a"/>
+                            
+                            <!-- Red serpent wrapped around the staff -->
+                            <path d="M-3,4 Q0,2 3,4 Q6,6 3,8 Q0,10 -3,8 Q-6,10 -3,12 Q0,14 3,12 Q6,14 3,16 Q0,18 -3,16 Q-6,18 -3,20 Q0,22 3,20 Q6,22 3,24 Q0,26 -3,24" 
+                                  stroke="#dc143c" stroke-width="1.5" fill="none"/>
+                            
+                            <!-- Red serpent head -->
+                            <circle cx="-3" cy="4" r="1" fill="#dc143c"/>
+                            
+                            <!-- Red serpent tail -->
+                            <path d="M-3,24 Q-4,26 -3,28 Q-2,26 -1,28" stroke="#dc143c" stroke-width="1" fill="none"/>
                         </g>
                     </svg>
                 </div>
                 
                 <h1>Cabinet Infirmier<br>Cœur de Maine</h1>
-                <h2>Soins professionnels à domicile ou au cabinet</h2>
+                <h2>Équipe de 4 infirmières diplômées d'État<br>Soins professionnels à domicile ou au cabinet</h2>
                 
                 <a href="#contact" class="cta-button">Prendre rendez-vous</a>
             </div>
         </div>
     </section>
 
-    <section id="services" class="services">
+        <section id="about" class="services">
+        <div class="container">
+            <h2 class="section-title">Qui sommes-nous ?</h2>
+            <div style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem; line-height: 1.8; color: #555;">
+                <p>Notre Cabinet infirmier Cœur de Maine est implanté depuis une dizaine d'années. Il est situé près de la cathédrale Saint-Maurice, entre Fleur d'eau et la nouvelle esplanade Cœur de Maine. À proximité se trouve le parking des halles, vous permettant un accès facile.</p>
+                
+                <p style="margin-top: 2rem; font-weight: 600; color: #333;">Nous sommes une équipe de 4 infirmières diplômées d'État dynamiques, professionnelles, à l'écoute et disponibles pour vous apporter les soins prescrits dont vous avez besoin à domicile, comme au cabinet sur rendez-vous.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="services" style="background: #f8f9fa;">
         <div class="container">
             <h2 class="section-title">Nos Services</h2>
             
             <div class="services-grid">
                 <div class="service-card">
+                    <div class="service-icon">💉</div>
+                    <h3>Soins techniques</h3>
+                    <p>Prises de sang, injections, vaccination, pansements, saignée sur prescription médicale</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">💊</div>
+                    <h3>Soins d'hygiène & traitements</h3>
+                    <p>Soins d'hygiène, préparation de piluliers, distribution et surveillance des traitements</p>
+                </div>
+                
+                <div class="service-card">
                     <div class="service-icon">🏠</div>
                     <h3>Soins à domicile</h3>
-                    <p>Nous nous déplaçons chez vous pour tous vos soins infirmiers dans le confort de votre domicile.</p>
+                    <p>Tous les jours, du lundi au dimanche (fériés inclus), de 7h à 19h30</p>
                 </div>
                 
                 <div class="service-card">
                     <div class="service-icon">🏥</div>
                     <h3>Soins au cabinet</h3>
-                    <p>Consultations et soins dans notre cabinet moderne situé à Angers, avec prise de rendez-vous.</p>
+                    <p>Sur rendez-vous uniquement. Cabinet conventionné sécurité sociale avec tiers payant</p>
                 </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">💉</div>
-                    <h3>Soins techniques</h3>
-                    <p>Injections, pansements, prélèvements sanguins et tous soins prescrits par votre médecin.</p>
-                </div>
-                
-                <div class="service-card">
-                    <div class="service-icon">👥</div>
-                    <h3>Accompagnement personnalisé</h3>
-                    <p>Suivi individualisé et écoute attentive pour un accompagnement de qualité.</p>
-                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem; padding: 2rem; background: linear-gradient(135deg, #dc143c, #b91c3c); border-radius: 15px; color: white;">
+                <h3 style="margin-bottom: 1rem; font-size: 1.5rem;">Informations importantes</h3>
+                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">✅ Cabinet conventionné par la sécurité sociale</p>
+                <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">✅ Pratique du tiers payant (mutuelle)</p>
+                <p style="font-size: 1.1rem;">✅ Soins sur prescription médicale uniquement</p>
             </div>
         </div>
     </section>
@@ -331,6 +361,19 @@
                     <h3>Adresse</h3>
                     <div class="contact-info">1 montée Tire-Jarret</div>
                     <div class="contact-info address">49100 ANGERS</div>
+                    <div style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                        Près de la cathédrale Saint-Maurice<br>
+                        Parking des halles à proximité
+                    </div>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">🕐</div>
+                    <h3>Horaires</h3>
+                    <div class="contact-info">Tous les jours</div>
+                    <div class="contact-info">Lundi au Dimanche</div>
+                    <div class="contact-info">(fériés inclus)</div>
+                    <div style="margin-top: 1rem; font-weight: bold; color: #dc143c;">7h - 19h30</div>
                 </div>
             </div>
         </div>
