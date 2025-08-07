@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mentions légales - Cabinet Infirmier Cœur de Maine</title>
+    <meta name="description" content="Mentions légales du Cabinet Infirmier Cœur de Maine à Angers.">
+    <link rel="stylesheet" id="active-style" href="styles/style.css">
+</head>
+<body>
+    <label for="style-switcher" style="position:fixed;top:10px;right:10px;z-index:2000;background:white;padding:4px 8px;border-radius:6px;">
+        Thème :
+        <select id="style-switcher"></select>
+    </label>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+    <header role="banner">
+        <nav class="container" role="navigation" aria-label="Navigation principale">
+            <div class="logo">Cœur de Maine</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="index.html#about">Qui sommes-nous</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content" role="main" style="max-width:800px;margin:120px auto 3rem auto;padding:2rem 1rem;background:white;border-radius:16px;">
+        <h1 style="color:#dc143c;">Mentions légales</h1>
+        <p><strong>Cabinet Infirmier Cœur de Maine</strong></p>
+        <p>1 montée Tire-Jarret, 49100 Angers</p>
+        <p>Téléphone : 02 41 87 13 16 / 06 10 35 08 24</p>
+        <p>Email : cabinet.infirmier.cdm@gmail.com</p>
+        <p>SIRET : [à compléter]</p>
+        <p>Numéro Adeli : [à compléter]</p>
+        <p>Infirmières diplômées d’État, inscrites à l’Ordre National des Infirmiers</p>
+        <p>Responsable de la publication : Cabinet Infirmier Cœur de Maine</p>
+        <p>Hébergeur : [Nom de l’hébergeur, adresse, téléphone]</p>
+        <p>
+            Ce site respecte la confidentialité des données personnelles conformément à la législation en vigueur.<br>
+            Pour toute question ou demande de rectification, contactez-nous à l’adresse ci-dessus.
+        </p>
+        <p style="margin-top:2rem;">
+            <a href="index.html" style="color:#dc143c;">Retour à l'accueil</a>
+        </p>
+    </main>
+
+    <footer role="contentinfo">
+        <div class="container">
+            <p>&copy; 2025 Cabinet Infirmier Cœur de Maine - Tous droits réservés | 
+            <a href="mentions-legales.html" style="color: #dc143c;">Mentions légales</a> | 
+            <a href="#" style="color: #dc143c;">Politique de confidentialité</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Liste des fichiers CSS disponibles dans le dossier styles/
+        const styles = [
+            {name: "Original", file: "styles/style.css"},
+            {name: "Moderne Minimaliste", file: "styles/style-moderne-minimaliste.css"},
+            {name: "Médical Professionnel", file: "styles/style-medical-professionnel.css"},
+            {name: "Médical Professionnel 2", file: "styles/style-medical-professionnel2.css"},
+            {name: "Élégant Premium", file: "styles/style-elegant-premium.css"},
+            {name: "Élégant Premium 2", file: "styles/style-elegant-premium2.css"},
+            // Ajoute ici d'autres thèmes si besoin
+        ];
+
+        const select = document.getElementById('style-switcher');
+        const activeStyle = document.getElementById('active-style');
+
+        // Remplir le select avec les styles
+        styles.forEach((style, idx) => {
+            const option = document.createElement('option');
+            option.value = style.file;
+            option.textContent = style.name;
+            select.appendChild(option);
+        });
+
+        // Appliquer le thème sauvegardé ou le thème par défaut
+        const savedTheme = localStorage.getItem('themeHref');
+        if (savedTheme) {
+            activeStyle.setAttribute('href', savedTheme);
+            select.value = savedTheme;
+        } else {
+            select.value = activeStyle.getAttribute('href');
+        }
+
+        // Changer la feuille de style active et sauvegarder le choix
+        select.addEventListener('change', function() {
+            activeStyle.setAttribute('href', this.value);
+            localStorage.setItem('themeHref', this.value);
+        });
+    </script>
+</body>
+</html>

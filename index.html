@@ -204,7 +204,7 @@
     <footer role="contentinfo">
         <div class="container">
             <p>&copy; 2025 Cabinet Infirmier Cœur de Maine - Tous droits réservés | 
-            <a href="#" style="color: #dc143c;">Mentions légales</a> | 
+            <a href="mentions-legales.html" style="color: #dc143c;">Mentions légales</a> | 
             <a href="#" style="color: #dc143c;">Politique de confidentialité</a></p>
         </div>
     </footer>
@@ -221,19 +221,30 @@
             // Ajoute ici d'autres thèmes si besoin
         ];
 
-        // Remplir le select avec les styles
         const select = document.getElementById('style-switcher');
+        const activeStyle = document.getElementById('active-style');
+
+        // Remplir le select avec les styles
         styles.forEach((style, idx) => {
             const option = document.createElement('option');
             option.value = style.file;
             option.textContent = style.name;
-            if(idx === 0) option.selected = true;
             select.appendChild(option);
         });
 
-        // Changer la feuille de style active
+        // Appliquer le thème sauvegardé ou le thème par défaut
+        const savedTheme = localStorage.getItem('themeHref');
+        if (savedTheme) {
+            activeStyle.setAttribute('href', savedTheme);
+            select.value = savedTheme;
+        } else {
+            select.value = activeStyle.getAttribute('href');
+        }
+
+        // Changer la feuille de style active et sauvegarder le choix
         select.addEventListener('change', function() {
-            document.getElementById('active-style').setAttribute('href', this.value);
+            activeStyle.setAttribute('href', this.value);
+            localStorage.setItem('themeHref', this.value);
         });
 
         // Smooth scrolling for navigation links
