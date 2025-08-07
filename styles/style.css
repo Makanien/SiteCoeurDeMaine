@@ -4,11 +4,21 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 .container {
@@ -280,6 +290,7 @@ footer {
     color: white;
     text-align: center;
     padding: 2rem 0;
+    flex-shrink: 0;
 }
 
 /* Breadcrumb */
