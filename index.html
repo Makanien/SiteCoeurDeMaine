@@ -36,9 +36,14 @@
         "medicalSpecialty": "Nursing"
     }
     </script>
-    <link rel="stylesheet" id="active-style" href="styles/style-medical-professionnel.css">
+    <link rel="stylesheet" id="active-style" href="styles/style.css">
 </head>
 <body>
+    <label for="style-switcher" style="position:fixed;top:10px;right:10px;z-index:2000;background:white;padding:4px 8px;border-radius:6px;">
+        Thème :
+        <select id="style-switcher"></select>
+    </label>
+    <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     
     <header role="banner">
         <nav class="container" role="navigation" aria-label="Navigation principale">
@@ -203,5 +208,79 @@
             <a href="#" style="color: #dc143c;">Politique de confidentialité</a></p>
         </div>
     </footer>
+
+    <script>
+        // Liste des fichiers CSS disponibles dans le dossier styles/
+        const styles = [
+            {name: "Original", file: "styles/style.css"},
+            {name: "Moderne Minimaliste", file: "styles/style-moderne-minimaliste.css"},
+            {name: "Médical Professionnel", file: "styles/style-medical-professionnel.css"},
+            {name: "Médical Professionnel 2", file: "styles/style-medical-professionnel2.css"},
+            {name: "Élégant Premium", file: "styles/style-elegant-premium.css"},
+            {name: "Élégant Premium 2", file: "styles/style-elegant-premium2.css"},
+            // Ajoute ici d'autres thèmes si besoin
+        ];
+
+        const select = document.getElementById('style-switcher');
+        const activeStyle = document.getElementById('active-style');
+
+        // Remplir le select avec les styles
+        styles.forEach((style, idx) => {
+            const option = document.createElement('option');
+            option.value = style.file;
+            option.textContent = style.name;
+            select.appendChild(option);
+        });
+
+        // Appliquer le thème sauvegardé ou le thème par défaut
+        const savedTheme = localStorage.getItem('themeHref');
+        if (savedTheme) {
+            activeStyle.setAttribute('href', savedTheme);
+            select.value = savedTheme;
+        } else {
+            select.value = activeStyle.getAttribute('href');
+        }
+
+        // Changer la feuille de style active et sauvegarder le choix
+        select.addEventListener('change', function() {
+            activeStyle.setAttribute('href', this.value);
+            localStorage.setItem('themeHref', this.value);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll effect to header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+
+        // Add focus management for accessibility
+        document.addEventListener('DOMContentLoaded', function() {
+            const skipLink = document.querySelector('.skip-link');
+            skipLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector('#main-content');
+                target.focus();
+                target.scrollIntoView();
+            });
+        });
+    </script>
 </body>
 </html>
